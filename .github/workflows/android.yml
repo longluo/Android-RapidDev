@@ -2,7 +2,10 @@ name: Android CI
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
+    tags:
+      - 'v*'
   pull_request:
     branches: [ master ]
 
@@ -29,45 +32,6 @@ jobs:
         chmod a+x gradlew
         ./gradlew assembleRelease
 
-    - name: upload apk
-      uses: actions/upload-artifact@v2
-      if: always()
-      with:
-        name: quick_dev
-        path: |
-              echo -e "\n show path \n"
-              pwd
-              ls -l
-              ${{github.workspace}}/app/build/outputs/apk/release/*.apk
-
-    - name: Upload to release
-      uses: release-drafter/release-drafter@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
-        body: |
-          Changes in this Release
-          - First Change
-          - Second Change
-        draft: false
-        prerelease: false
-
-    - name: Upload File
-      id: upload
-      uses: JantHsueh/upload-file-action@master
-      with:
-        url: https://www.pgyer.com/apiv2/app/upload
-        forms: '{"_api_key":"${{ secrets.pgyer_key }}","buildInstallType":3}'
-        fileForms: '{"file":"app/build/outputs/apk/release/app-release-unsigned.apk"}'
-
     - name: Get Time
       id: time
       uses: JantHsueh/get-time-action@master
@@ -86,3 +50,41 @@ jobs:
       with:
         tag: release
 
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+
+    - name: Upload Release APK
+      id: upload_release_asset
+      uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: app/build/outputs/apk/release/app-release-unsigned.apk
+          asset_name: quickDev.apk
+          asset_content_type: application/zip
+
+    - name: upload apk
+      uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: quick_dev
+        path: |
+          echo -e "\n show path \n"
+          pwd
+          ls -l
+          ${{github.workspace}}/app/build/outputs/apk/release/*.apk
+
+    - name: Upload File
+      id: upload
+      uses: JantHsueh/upload-file-action@master
+      with:
+        url: https://www.pgyer.com/apiv2/app/upload
+        forms: '{"_api_key":"${{ secrets.pgyer_key }}","buildInstallType":3}'
+        fileForms: '{"file":"app/build/outputs/apk/release/app-release-unsigned.apk"}'
