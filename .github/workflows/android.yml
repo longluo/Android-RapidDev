@@ -40,6 +40,11 @@ jobs:
               ls -l
               ${{github.workspace}}/app/build/outputs/apk/release/*.apk
 
+    - name: Upload to release
+      uses: release-drafter/release-drafter@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Upload File
       id: upload
       uses: JantHsueh/upload-file-action@master
