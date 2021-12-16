@@ -1,0 +1,79 @@
+plugins {
+    id 'com.android.application'
+    id 'com.jakewharton.butterknife'
+    id 'org.greenrobot.greendao'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.longluo.android"
+	
+        minSdkVersion rootProject.ext.appMinSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "arm64-v8a"
+            abiFilters "armeabi-v7a"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+greendao{
+    schemaVersion 1
+    daoPackage 'com.longluo.android.dao.gen'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation 'junit:junit:4.12'
+
+    implementation "androidx.appcompat:appcompat:1.2.0"
+    implementation "com.google.android.material:material:1.2.1"
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    // ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    // MultiDex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // GreenDao
+    implementation 'org.greenrobot:greendao:3.3.0'
+
+    implementation 'net.zetetic:android-database-sqlcipher:3.5.4'
+
+    implementation 'com.mikepenz:fastadapter-commons:2.1.0@aar'
+    implementation('com.mikepenz:fastadapter:2.1.5@aar') {
+        transitive = true
+    }
+}
