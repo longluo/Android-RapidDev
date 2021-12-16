@@ -58,7 +58,7 @@ jobs:
       id: apk
       uses: JantHsueh/get-apk-info-action@master
       with:
-        apkPath: app/build/outputs/apk/debug/quick_dev.apk
+        apkPath: app/build/outputs/apk/release/app-release-unsigned.apk
 
     - name: Get git log
       id: git_log
