@@ -1,4 +1,4 @@
-package com.longluo.android.db;
+package com.longluo.android.db.greendao;
 
 import com.longluo.android.dao.gen.StudentDao;
 

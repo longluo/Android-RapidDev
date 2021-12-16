@@ -40,6 +40,7 @@ jobs:
     - name: Get Time
       id: time
       uses: JantHsueh/get-time-action@master
-        with:
-          timeZone: 8
+      with:
+        timeZone: 8
+
 

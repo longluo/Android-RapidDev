@@ -1,4 +1,4 @@
-package com.longluo.android.db;
+package com.longluo.android.db.greendao;
 
 import android.content.Context;
 

@@ -2,7 +2,7 @@ package com.longluo.android;
 
 import android.app.Application;
 
-import com.longluo.android.db.DbCore;
+import com.longluo.android.db.greendao.DbCore;
 
 
 public class App extends Application {
