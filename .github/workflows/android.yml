@@ -63,6 +63,6 @@ jobs:
     - name: Get git log
       id: git_log
       uses: JantHsueh/get-git-log-action@master
-        with:
+      with:
         tag: release
 
