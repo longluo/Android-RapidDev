@@ -51,30 +51,11 @@ jobs:
       with:
         tag: release
 
-    - name: Create Release
-      id: create_release
-      uses: release-drafter/release-drafter@v5
-      with:
-        config-name: release-drafter.yml
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Upload Release APK
-      id: upload_release_asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./app/build/outputs/apk/release/app-release-unsigned.apk
-        asset_name: quickDev.apk
-        asset_content_type: application/zip
-
     - name: upload apk
       uses: actions/upload-artifact@v2
       if: always()
       with:
-        name: QuickDev_${{ steps.id.outputs }}_${{ steps.time.outputs }}
+        name: QuickDev.apk
         path: |
           echo -e "\n show path \n"
           pwd
