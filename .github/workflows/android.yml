@@ -20,8 +20,26 @@ jobs:
         distribution: 'adopt'
         cache: gradle
 
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      
     - name: Build with Gradle
-      run: ./gradlew build
+      run: |
+        pwd
+        echo -e "\n gradlew assembleRelease \n"
+        chmod a+x gradlew
+        ./gradlew assembleRelease
+
+    - name: upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: upload-apk
+        path: |
+              echo -e "\n show path \n"
+              pwd
+              ls -l
+              ${{github.workspace}}/app/build/outputs/apk/release/*.apk
+
+    - name: Get Time
+      id: time
+      uses: JantHsueh/get-time-action@master
+        with:
+          timeZone: 8
+
