@@ -1,4 +1,4 @@
-package com.longluo.android.ui;
+package com.longluo.android.ui.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -35,8 +35,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+public class GreenDaoActivity extends AppCompatActivity {
+    private static final String LOG_TAG = GreenDaoActivity.class.getSimpleName();
 
     @BindView(R.id.toolbar)
     Toolbar mToolbar;
@@ -63,13 +63,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_greendao);
         ButterKnife.bind(this);
 
-        setSupportActionBar(mToolbar);
+//        setSupportActionBar(mToolbar);
         mToolbar.setTitleTextColor(Color.WHITE);
 
-        Log.d(TAG, "db version: " + DaoMaster.SCHEMA_VERSION);
+        Log.d(LOG_TAG, "db version: " + DaoMaster.SCHEMA_VERSION);
 
         mFastAdapter = new GenericFastItemAdapter<>(new Function<Student, StudentItem>() {
             @Override
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             item.number = s.getNumber();
             item.score = s.getScore();
 
-            Log.d(TAG, "db: " + item.id + ", "
+            Log.d(LOG_TAG, "db: " + item.id + ", "
                     + item.age + ", " + item.name + ", "
                     + item.number
             );
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showToast(String msg) {
         if (mToast == null) {
-            mToast = Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT);
+//            mToast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
         } else {
             mToast.show();
         }

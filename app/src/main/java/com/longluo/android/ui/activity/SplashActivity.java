@@ -1,11 +1,9 @@
-package com.longluo.android.ui;
+package com.longluo.android.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.longluo.android.R;

@@ -8,6 +8,7 @@ import com.umeng.commonsdk.UMConfigure;
 
 
 public class App extends Application {
+
     @Override
     public void onCreate() {
         super.onCreate();
