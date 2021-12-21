@@ -13,6 +13,7 @@ buildscript {
         mavenCentral()
         maven { url 'https://jitpack.io' }
         maven { url 'https://dl.bintray.com' }
+        maven { url 'https://repo1.maven.org/maven2/' }
     }
 
     dependencies {
@@ -41,6 +42,7 @@ allprojects {
         mavenCentral()
         maven { url 'https://jitpack.io' }
         maven { url 'https://dl.bintray.com' }
+        maven { url 'https://repo1.maven.org/maven2/' }
     }
 }
 
@@ -49,8 +51,8 @@ task clean(type: Delete) {
 }
 
 ext {
-    versionCode = 1
-    versionName = '1.0'
+    versionCode = 2
+    versionName = '1.1'
 
     libMinSdkVersion = 23
     appMinSdkVersion = 23
