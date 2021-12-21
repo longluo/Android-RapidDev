@@ -1,30 +1,36 @@
 package com.longluo.android.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 
+import com.google.android.material.navigation.NavigationView;
 import com.longluo.android.R;
+import com.longluo.android.ui.fragment.DetailFragment;
+import com.longluo.android.ui.fragment.MasterFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MasterFragment.Callbacks {
     private static final String LOG_TAG = "MainActivity";
 
-    @BindView(R.id.my_drawer_layout)
+    @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
 
-    @BindView(R.id.btn_greendao)
-    Button mBtnGreenDao;
+    @BindView(R.id.toolbar)
+    Toolbar toolBar;
+
+    @BindView(R.id.nv_drawer)
+    NavigationView navigationView;
 
     ActionBarDrawerToggle actionBarDrawerToggle;
 
@@ -32,15 +38,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
 
-        // pass the Open and Close toggle for the drawer layout listener
-        // to toggle the button
+        // pass the Open and Close toggle for the drawer layout listener to toggle the button
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
+//        setSupportActionBar(toolBar);
         // to make the Navigation drawer icon always appear on the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -48,13 +55,32 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        mBtnGreenDao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, GreenDaoActivity.class);
-                startActivity(intent);
-            }
-        });
+        // Setup drawer view
+        setupDrawerContent(navigationView);
+
+        // insert detail fragment into detail container
+        DetailFragment detailFragment = DetailFragment.newInstance();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .add(R.id.nv_drawer, detailFragment, "DETAIL")
+                .commit();
+
+        // insert master fragment into master container (i.e. nav view)
+        MasterFragment masterFragment = MasterFragment.newInstance();
+        fragmentManager.beginTransaction()
+                .add(R.id.flContent, masterFragment, "MASTER")
+                .commit();
+    }
+
+    private void setupDrawerContent(NavigationView navigationView) {
+        navigationView.setNavigationItemSelectedListener(
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+//                        selectDrawerItem(menuItem);
+                        return true;
+                    }
+                });
     }
 
     /**
@@ -63,10 +89,29 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
+        // The action bar home/up action should open or close the drawer.
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                drawerLayout.openDrawer(GravityCompat.START);
+                return true;
+
+            default:
+                break;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onMasterItemClicked(int masterItemId) {
+        DetailFragment detailFragment = (DetailFragment) getSupportFragmentManager()
+                .findFragmentByTag("DETAIL");
+        detailFragment.onMasterItemClicked(masterItemId);
+
+        // Close the navigation drawer
+        if (drawerLayout != null) {
+            drawerLayout.closeDrawers();
+        }
+    }
+
 }
