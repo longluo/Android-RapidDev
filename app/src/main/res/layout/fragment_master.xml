@@ -5,7 +5,7 @@
     android:background="@color/blue"
     android:orientation="vertical"
     android:paddingTop="@dimen/nav_drawer_top_padding">
-    
+
     <TextView
         android:id="@+id/master_item_1"
         android:layout_width="match_parent"
@@ -26,5 +26,13 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="master list item 3" />
+
+    <TextView
+        android:id="@+id/tv_greendao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="GreenDao Demo"
+        android:textSize="20sp" />
 
 </LinearLayout>

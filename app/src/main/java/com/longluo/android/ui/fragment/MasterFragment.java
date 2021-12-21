@@ -1,6 +1,7 @@
 package com.longluo.android.ui.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,11 +12,28 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.longluo.android.R;
+import com.longluo.android.ui.activity.GreenDaoActivity;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class MasterFragment extends Fragment {
 
     private Callbacks callbacks;
+
+    @BindView(R.id.master_item_1)
+    TextView textView1;
+
+    @BindView(R.id.master_item_2)
+    TextView textView2;
+
+    @BindView(R.id.master_item_3)
+    TextView textView3;
+
+    @BindView(R.id.tv_greendao)
+    TextView tvGreenDao;
 
     public static MasterFragment newInstance() {
         return new MasterFragment();
@@ -42,29 +60,7 @@ public class MasterFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_master, container, false);
 
-        TextView textView1 = (TextView) view.findViewById(R.id.master_item_1);
-        textView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                callbacks.onMasterItemClicked(1);
-            }
-        });
-
-        TextView textView2 = (TextView) view.findViewById(R.id.master_item_2);
-        textView2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                callbacks.onMasterItemClicked(2);
-            }
-        });
-
-        TextView textView3 = (TextView) view.findViewById(R.id.master_item_3);
-        textView3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                callbacks.onMasterItemClicked(3);
-            }
-        });
+        ButterKnife.bind(this, view);
 
         return view;
     }
@@ -74,4 +70,30 @@ public class MasterFragment extends Fragment {
         super.onDetach();
         callbacks = null;
     }
+
+    @OnClick({R.id.master_item_1, R.id.master_item_2, R.id.master_item_3, R.id.tv_greendao})
+    void click(View view) {
+        switch (view.getId()) {
+            case R.id.master_item_1:
+                callbacks.onMasterItemClicked(1);
+                break;
+
+            case R.id.master_item_2:
+                callbacks.onMasterItemClicked(2);
+                break;
+
+            case R.id.master_item_3:
+                callbacks.onMasterItemClicked(3);
+                break;
+
+            case R.id.tv_greendao:
+                Intent intent = new Intent(getActivity(), GreenDaoActivity.class);
+                getActivity().startActivity(intent);
+                break;
+
+            default:
+                break;
+        }
+    }
+
 }

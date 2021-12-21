@@ -1,6 +1,7 @@
 package com.longluo.android.ui.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
@@ -104,6 +105,8 @@ public class MainActivity extends AppCompatActivity implements MasterFragment.Ca
 
     @Override
     public void onMasterItemClicked(int masterItemId) {
+        Log.d(LOG_TAG, "onMasterItemClicked id=" + masterItemId);
+
         DetailFragment detailFragment = (DetailFragment) getSupportFragmentManager()
                 .findFragmentByTag("DETAIL");
         detailFragment.onMasterItemClicked(masterItemId);
