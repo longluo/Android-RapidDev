@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.navigation.NavigationView;
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity implements MasterFragment.Ca
 
     ActionBarDrawerToggle actionBarDrawerToggle;
 
+    private String[] mNavigationDrawerItemTitles;
+
+    private CharSequence mDrawerTitle;
+    private CharSequence mTitle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,15 +48,14 @@ public class MainActivity extends AppCompatActivity implements MasterFragment.Ca
 
         ButterKnife.bind(this);
 
+        setupToolbar(toolBar);
+        mNavigationDrawerItemTitles = getResources().getStringArray(R.array.navigation_drawer_items_array);
+
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
 
         // pass the Open and Close toggle for the drawer layout listener to toggle the button
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-
-//        setSupportActionBar(toolBar);
-        // to make the Navigation drawer icon always appear on the action bar
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         init();
     }
@@ -71,6 +76,18 @@ public class MainActivity extends AppCompatActivity implements MasterFragment.Ca
         fragmentManager.beginTransaction()
                 .add(R.id.flContent, masterFragment, "MASTER")
                 .commit();
+    }
+
+    private void setupToolbar(Toolbar toolbar) {
+//        setSupportActionBar(toolBar);
+        // to make the Navigation drawer icon always appear on the action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    public void setTitle(CharSequence title) {
+        mTitle = title;
+        getSupportActionBar().setTitle(mTitle);
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
@@ -114,6 +131,39 @@ public class MainActivity extends AppCompatActivity implements MasterFragment.Ca
         // Close the navigation drawer
         if (drawerLayout != null) {
             drawerLayout.closeDrawers();
+        }
+    }
+
+    private void selectItem(int position) {
+        Fragment fragment = null;
+
+        switch (position) {
+            case 0:
+                fragment = new DetailFragment();
+                break;
+
+            case 1:
+//                fragment = new GreenDaoFragment();
+                break;
+
+            case 2:
+                fragment = new MasterFragment();
+                break;
+
+            default:
+                break;
+        }
+
+        if (fragment != null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+//            mDrawerList.setItemChecked(position, true);
+//            mDrawerList.setSelection(position);
+            setTitle(mNavigationDrawerItemTitles[position]);
+//            drawerLayout.closeDrawer(mDrawerList);
+        } else {
+            Log.e(LOG_TAG, "Error in creating fragment");
         }
     }
 
