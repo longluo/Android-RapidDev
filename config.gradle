@@ -35,31 +35,54 @@ ext {
 
     //依赖第三方配置
     dependencies = [
-             // MultiDex
-            'multidex'                  : "androidx.multidex:multidex:2.0.1",
+            //commons-compress
+            "commons-compress"                     : "org.apache.commons:commons-compress:1.21",
+
+            // slf4j
+            "slf4j"                                : "org.slf4j:slf4j-android:1.7.32",
 
             //ButterKnife
             "butterknife"                          : "com.jakewharton:butterknife:10.2.1",
             "butterknife-compiler"                 : "com.jakewharton:butterknife-compiler:10.2.1",
+
+            // UMeng
+            "umsdk-common"                        : "com.umeng.umsdk:common:9.4.4",
+            "umsdk-asms"                          : "com.umeng.umsdk:asms:1.4.1",
 
             // DataBase
             // SQLite
              'sqlite'                              : "androidx.sqlite:sqlite:2.0.1",
             // GreenDao
             "greendao"                             : "org.greenrobot:greendao:3.3.0",
+            "greendao-api"                         : "org.greenrobot:greendao-api:3.3.0",
+
             // LitePal
             "litepal"                              : "org.litepal.android:core:1.6.1",
 
-            // data cipher
-            "sqlcipher"                              : "net.zetetic:android-database-sqlcipher:4.5.0",
+            //json解析
+            "gson"                                 : "com.google.code.gson:gson:2.8.7",
 
-            // UMeng
-            "umsdk-common"                        : "com.umeng.umsdk:common:9.4.4",
-            "umsdk-asms"                          : "com.umeng.umsdk:asms:1.4.1",
+            // juniversalchardet
+            "juniversalchardet"                    : "com.googlecode.juniversalchardet:juniversalchardet:1.0.3",
+
+            // jsoup
+            "jsoup"                                : "org.jsoup:jsoup:1.14.3",
+
+            // io
+            "okio-parent"                          : "com.squareup.okio:okio-parent:1.17.5",
+
+            // rtfparserkit
+            "rtfparserkit"                         : "com.github.joniles:rtfparserkit:1.16.0",
+
+            // mammoth
+            "mammoth"                              : "org.zwobble.mammoth:mammoth:1.4.2",
+
+            // EventBus
+            "eventbus"                             : "org.greenrobot:eventbus:3.2.0",
 
             //rxjava
-            "rxjava"                               : "io.reactivex.rxjava2:rxjava:2.2.3",
-            "rxandroid"                            : "io.reactivex.rxjava2:rxandroid:2.1.0",
+            "rxjava"                               : "io.reactivex.rxjava2:rxjava:2.2.19",
+            "rxandroid"                            : "io.reactivex.rxjava2:rxandroid:2.1.1",
 
             //rx系列与View生命周期同步
             "rxlifecycle"                          : "com.trello.rxlifecycle2:rxlifecycle:2.2.2",
@@ -72,8 +95,12 @@ ext {
             "rxpermissions"                        : "com.github.tbruyelle:rxpermissions:0.10.2",
 
             //network
-            "okhttp"                               : "com.squareup.okhttp3:okhttp:3.10.0",
-            "retrofit"                             : "com.squareup.retrofit2:retrofit:2.4.0",
+            "okhttp3"                              : "com.squareup.okhttp3:okhttp:3.12.3",
+
+            "okhttp-digest"                        : 'io.github.rburgst:okhttp-digest:1.21',
+
+            // retrofit2
+            "retrofit2"                            : "com.squareup.retrofit2:retrofit:2.4.0",
             "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
             "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
 
@@ -82,11 +109,8 @@ ext {
             "leakcanary-support-fragment"          : "com.squareup.leakcanary:leakcanary-support-fragment:1.6.3",
 
             //glide图片加载
-            "glide"                                : "com.github.bumptech.glide:glide:4.11.0",
-            "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.11.0",
-
-            //json解析
-            "gson"                                 : "com.google.code.gson:gson:2.8.6",
+            "glide"                                : "com.github.bumptech.glide:glide:4.12.0",
+            "glide-compiler"                       : "com.github.bumptech.glide:compiler:4.12.0",
 
             //material-dialogs
             "material-dialogs-core"                : "com.afollestad.material-dialogs:core:0.9.6.0",
