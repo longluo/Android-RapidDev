@@ -30,6 +30,26 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.activity.DemoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity
+            android:name=".ui.activity.JumpActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity
+            android:name=".ui.activity.ResponseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity
+            android:name=".ui.activity.AdapterTestActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <activity
+            android:name=".ui.activity.TransitionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
         <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <data android:scheme="um.61bc361fe014255fcbbb8876" />
