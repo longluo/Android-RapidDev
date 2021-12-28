@@ -63,6 +63,9 @@ greendao{
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    
+        implementation project(':baseframework')
+    
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -78,7 +81,7 @@ dependencies {
     implementation rootProject.ext.support["recyclerview"]
 
     // MultiDex
-    implementation rootProject.ext.dependencies["multidex"]
+//    implementation rootProject.ext.dependencies["multidex"]
 
     implementation rootProject.ext.dependencies["sqlite"]
 
@@ -90,7 +93,7 @@ dependencies {
     implementation rootProject.ext.dependencies["greendao"]
 
     // data cipher
-    implementation rootProject.ext.dependencies["sqlcipher"]
+//    implementation rootProject.ext.dependencies["sqlcipher"]
 
     implementation 'com.mikepenz:fastadapter-commons:2.1.0@aar'
     implementation('com.mikepenz:fastadapter:2.1.5@aar') {

@@ -57,7 +57,7 @@ ext {
             "greendao-api"                         : "org.greenrobot:greendao-api:3.3.0",
 
             // LitePal
-            "litepal"                              : "org.litepal.android:core:1.6.1",
+            "litepal"                              : "org.litepal.guolindev:core:3.2.3",
 
             //json解析
             "gson"                                 : "com.google.code.gson:gson:2.8.7",
@@ -66,7 +66,10 @@ ext {
             "juniversalchardet"                    : "com.googlecode.juniversalchardet:juniversalchardet:1.0.3",
 
             // jsoup
-            "jsoup"                                : "org.jsoup:jsoup:1.14.3",
+            "jsoup"                                : "org.jsoup:jsoup:jsoup:1.14.1",
+
+            // zip4j
+            "zip4j"                                : "net.lingala.zip4j:zip4j:2.9.1",
 
             // io
             "okio-parent"                          : "com.squareup.okio:okio-parent:1.17.5",
@@ -94,15 +97,18 @@ ext {
             //rx 6.0权限请求
             "rxpermissions"                        : "com.github.tbruyelle:rxpermissions:0.10.2",
 
+            // html-textview
+            "html-textview"                             : "org.sufficientlysecure:html-textview:4.0",
+
             //network
             "okhttp3"                              : "com.squareup.okhttp3:okhttp:3.12.3",
-
-            "okhttp-digest"                        : 'io.github.rburgst:okhttp-digest:1.21',
 
             // retrofit2
             "retrofit2"                            : "com.squareup.retrofit2:retrofit:2.4.0",
             "converter-gson"                       : "com.squareup.retrofit2:converter-gson:2.4.0",
             "adapter-rxjava"                       : "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+
+            "okhttp-digest"                        : 'io.github.rburgst:okhttp-digest:1.21',
 
             // memory
             "leakcanary"                           : "com.squareup.leakcanary:leakcanary-android:1.6.3",
