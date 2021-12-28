@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId rootProject.ext.android.applicationId
-	
+
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
         versionCode rootProject.ext.android.versionCode
@@ -40,7 +40,7 @@ android {
         debug {
             minifyEnabled false
         }
-	
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -55,7 +55,7 @@ android {
     }
 }
 
-greendao{
+greendao {
     schemaVersion 1
     daoPackage 'com.longluo.android.dao.gen'
     targetGenDir 'src/main/java'
@@ -63,9 +63,11 @@ greendao{
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    
-        implementation project(':baseframework')
-    
+
+    implementation project(':BaseFramework')
+    implementation project(':DroidUI')
+    implementation project(':DroidUtils')
+
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })

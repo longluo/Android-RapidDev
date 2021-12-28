@@ -22,7 +22,8 @@ public class SplashActivity extends AppCompatActivity {
 
     private void initData() {
         Log.d(LOG_TAG, "initData");
-        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+//        Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+        Intent intent = new Intent(SplashActivity.this, DemoActivity.class);
         this.startActivity(intent);
         SplashActivity.this.finish();
     }
