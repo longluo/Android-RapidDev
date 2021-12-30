@@ -1,5 +1,6 @@
 rootProject.name = "Android_Dev_Quick"
 include ':app'
-include ':BaseFramework'
-include ':DroidUtils'
+include ':DroidBase'
 include ':DroidUI'
+include ':DroidUtils'
+include ':DroidLibrary'
