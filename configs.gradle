@@ -9,8 +9,8 @@ ext {
             minSdkVersion           : 21,
             targetSdkVersion        : 28,
             ndkVersion              : "21.4.7075529",
-            versionCode             : 9,
-            versionName             : "1.6",
+            versionCode             : 10,
+            versionName             : "1.7",
     ]
 
     //version配置

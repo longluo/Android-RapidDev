@@ -53,16 +53,6 @@ android {
         }
     }
 
-
-/*    signingConfigs {
-        myConfig {
-            storeFile file('E:\\Project\\AndroidApp\\Android_Dev_Quick\\myApkSign.jks')
-            storePassword 'my123456'
-            keyAlias 'mykey'
-            keyPassword 'my123456'
-        }
-    }*/
-
     // 构建配置：https://developer.android.google.cn/studio/build/build-variants
     buildTypes {
 
