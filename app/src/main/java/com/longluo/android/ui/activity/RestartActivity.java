@@ -8,9 +8,7 @@ import com.longluo.android.R;
 import com.longluo.android.app.AppActivity;
 
 /**
-
-2020/11/29
- 重启应用
+ * 重启应用
  */
 public final class RestartActivity extends AppActivity {
 
@@ -28,7 +26,8 @@ public final class RestartActivity extends AppActivity {
     }
 
     @Override
-    protected void initView() {}
+    protected void initView() {
+    }
 
     @Override
     protected void initData() {

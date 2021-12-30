@@ -21,7 +21,7 @@ import io.github.longluo.ui.view.CountdownView;
 
 /**
 
-02/27
+27
  忘记密码
  */
 public final class PasswordForgetActivity extends AppActivity

@@ -20,9 +20,7 @@ import com.longluo.android.widget.PlayerView;
 import java.util.List;
 
 /**
-
-2020/03/01
- 视频选择适配器
+ * 视频选择适配器
  */
 public final class VideoSelectAdapter extends AppAdapter<VideoSelectActivity.VideoBean> {
 

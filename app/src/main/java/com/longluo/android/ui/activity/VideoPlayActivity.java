@@ -19,9 +19,7 @@ import com.longluo.android.widget.PlayerView;
 import java.io.File;
 
 /**
-
-2020/02/16
- 视频播放界面
+ * 视频播放界面
  */
 public class VideoPlayActivity extends AppActivity
         implements PlayerView.OnPlayListener {
@@ -116,37 +114,60 @@ public class VideoPlayActivity extends AppActivity
         mBuilder = savedInstanceState.getParcelable(INTENT_KEY_PARAMETERS);
     }
 
-    /** 竖屏播放 */
-    public static final class Portrait extends VideoPlayActivity {}
+    /**
+     * 竖屏播放
+     */
+    public static final class Portrait extends VideoPlayActivity {
+    }
 
-    /** 横屏播放 */
-    public static final class Landscape extends VideoPlayActivity {}
+    /**
+     * 横屏播放
+     */
+    public static final class Landscape extends VideoPlayActivity {
+    }
 
     /**
      * 播放参数构建
      */
     public static final class Builder implements Parcelable {
 
-        /** 视频源 */
+        /**
+         * 视频源
+         */
         private String videoSource;
-        /** 视频标题 */
+        /**
+         * 视频标题
+         */
         private String videoTitle;
 
-        /** 播放进度 */
+        /**
+         * 播放进度
+         */
         private int playProgress;
-        /** 手势开关 */
+        /**
+         * 手势开关
+         */
         private boolean gestureEnabled = true;
-        /** 循环播放 */
+        /**
+         * 循环播放
+         */
         private boolean loopPlay = false;
-        /** 自动播放 */
+        /**
+         * 自动播放
+         */
         private boolean autoPlay = true;
-        /** 播放完关闭 */
+        /**
+         * 播放完关闭
+         */
         private boolean autoOver = true;
 
-        /** 播放方向 */
+        /**
+         * 播放方向
+         */
         private int activityOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED;
 
-        public Builder() {}
+        public Builder() {
+        }
 
         protected Builder(Parcel in) {
             videoSource = in.readString();

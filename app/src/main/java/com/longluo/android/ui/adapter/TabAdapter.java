@@ -19,7 +19,7 @@ import com.longluo.android.app.AppAdapter;
 
 /**
 
-2021/02/28
+2021/28
  Tab 适配器
  */
 public final class TabAdapter extends AppAdapter<String> implements BaseAdapter.OnItemClickListener {

@@ -14,11 +14,12 @@ android {
     defaultConfig {
 
         // 无痛修改包名：https://www.jianshu.com/p/17327e191d2e
-        applicationId rootProject.ext.android.applicationId
+        applicationId 'com.longluo.android'
 
         //multiDexEnabled true
 
-        ndkVersion rootProject.ext.android.ndkVersion
+        ndkVersion '21.4.7075529'
+
 //
 //        ndk {
 //            abiFilters 'arm64-v8a'
@@ -153,7 +154,6 @@ greendao {
 // 添加构建依赖项：https://developer.android.google.cn/studio/build/dependencies
 // api 与 implementation 的区别：https://www.jianshu.com/p/8962d6ba936e
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     // 基类封装
     implementation project(':DroidBase')
@@ -163,7 +163,7 @@ dependencies {
     implementation project(':DroidUtils')
     // Libraries封装
     implementation project(':DroidLibrary')
-    
+
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -171,24 +171,18 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     testImplementation 'junit:junit:4.13.1'
 
-    implementation rootProject.ext.support["appcompat"]
-    implementation rootProject.ext.support["design"]
-    implementation rootProject.ext.support["cardview"]
-    implementation rootProject.ext.support["support-v4"]
-
-    implementation rootProject.ext.support["recyclerview"]
-
     // MultiDex
 //    implementation rootProject.ext.dependencies["multidex"]
 
-    implementation rootProject.ext.dependencies["sqlite"]
+    // sqlite
+    implementation 'androidx.sqlite:sqlite:2.1.0'
 
     // ButterKnife
-    implementation rootProject.ext.dependencies["butterknife"]
-    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 
     // GreenDao
-    implementation rootProject.ext.dependencies["greendao"]
+    implementation "org.greenrobot:greendao:3.3.0"
 
     // data cipher
 //    implementation rootProject.ext.dependencies["sqlcipher"]

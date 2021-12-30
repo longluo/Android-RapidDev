@@ -11,9 +11,7 @@ import com.longluo.android.app.AppAdapter;
 import com.longluo.android.http.glide.GlideApp;
 
 /**
-
-2020/08/28
- 图片预览适配器
+ * 图片预览适配器
  */
 public final class ImagePreviewAdapter extends AppAdapter<String> {
 

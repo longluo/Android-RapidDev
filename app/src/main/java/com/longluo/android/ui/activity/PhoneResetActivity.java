@@ -27,7 +27,7 @@ import io.github.longluo.ui.view.CountdownView;
 
 /**
 
-04/20
+20
  设置手机号
  */
 public final class PhoneResetActivity extends AppActivity

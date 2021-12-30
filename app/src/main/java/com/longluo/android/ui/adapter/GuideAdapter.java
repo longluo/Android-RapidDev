@@ -10,9 +10,7 @@ import com.longluo.android.R;
 import com.longluo.android.app.AppAdapter;
 
 /**
-
-2020/08/28
- 引导页适配器
+ * 引导页适配器
  */
 public final class GuideAdapter extends AppAdapter<Integer> {
 

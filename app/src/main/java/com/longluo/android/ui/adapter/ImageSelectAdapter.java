@@ -16,9 +16,7 @@ import com.longluo.android.http.glide.GlideApp;
 import java.util.List;
 
 /**
-
-07/24
- 图片选择适配器
+ * 图片选择适配器
  */
 public final class ImageSelectAdapter extends AppAdapter<String> {
 
