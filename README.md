@@ -1,17 +1,17 @@
-# °²×¿¿ìËÙ¿ª·¢¿ò¼Ü Android_Dev_Quick
+# å®‰å“å¿«é€Ÿå¼€å‘æ¡†æ¶ Android_Dev_Quick
 
-* ÏîÄ¿µØÖ·£º[Github](https://github.com/longluo/Android_Dev_Quick)
+* é¡¹ç›®åœ°å€ï¼š[Github](https://github.com/longluo/Android_Dev_Quick)
 
-* ²©¿ÍµØÖ·£º[Long Luo's Develop Notes](https://longluo.me)
+* åšå®¢åœ°å€ï¼š[Long Luo's Develop Notes](https://longluo.me)
 
 
-* [µã»÷ÏÂÔØ Apk ÌåÑé](https://raw.githubusercontent.com/longluo/Android_Dev_Quick/dev/releases/Android_Dev_Quick_debug.apk)£¬
+* [ç‚¹å‡»ä¸‹è½½ Apk ä½“éªŒ](https://raw.githubusercontent.com/longluo/Android_Dev_Quick/dev/releases/Android_Dev_Quick_debug.apk)ï¼Œ
 
-»òÕßÉ¨ÂëÏÂÔØ
+æˆ–è€…æ‰«ç ä¸‹è½½
 
 ![](pictures/QuickDev_QRCode.png)
 
-### ³£ÓÃ½çÃæ
+### å¸¸ç”¨ç•Œé¢
 
 ![](picture/activity/1.jpg) ![](picture/activity/2.jpg) ![](picture/activity/3.jpg)
 
@@ -51,7 +51,7 @@
 
 ![](picture/activity/36.jpg)
 
-#### ³£ÓÃ¶Ô»°¿ò
+#### å¸¸ç”¨å¯¹è¯æ¡†
 
 ![](picture/dialog/1.jpg) ![](picture/dialog/2.jpg) ![](picture/dialog/3.jpg)
 
@@ -65,7 +65,7 @@
 
 ![](picture/dialog/16.jpg) ![](picture/dialog/17.jpg) ![](picture/dialog/18.jpg)
 
-### ¶¯Í¼ĞÀÉÍ
+### åŠ¨å›¾æ¬£èµ
 
 ![](picture/gif/1.gif) ![](picture/gif/2.gif) ![](picture/gif/3.gif)
 

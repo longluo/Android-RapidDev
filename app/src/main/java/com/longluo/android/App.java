@@ -40,7 +40,6 @@ import timber.log.Timber;
 public class App extends Application {
 
     @Log("启动耗时")
-    @Override
     public void onCreate() {
         super.onCreate();
         initSdk(this);
