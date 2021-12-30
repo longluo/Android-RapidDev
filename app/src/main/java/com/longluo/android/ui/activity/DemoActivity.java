@@ -13,7 +13,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.github.longluo.util.ToastUtils;
 
-
 public class DemoActivity extends AppCompatActivity {
 
     @BindView(R.id.btn_test)
