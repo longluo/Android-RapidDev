@@ -71,4 +71,4 @@ jobs:
       with:
         url: https://www.pgyer.com/apiv2/app/upload
         forms: '{"_api_key":"${{ secrets.pgyer_key }}","buildInstallType":3}'
-        fileForms: '{"file":"build/app/outputs/apk/release/*.apk"}'
+        fileForms: '{"file":"releases/Android_Dev_Quick_release.apk"}'
