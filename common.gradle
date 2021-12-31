@@ -39,13 +39,12 @@ android {
 
     // 代码警告配置
     lintOptions {
-        //
         abortOnError false
 
         // 禁用文本硬编码警告
-//        disable 'HardcodedText'
+        disable 'HardcodedText'
         // 禁用图片描述警告
-//        disable 'ContentDescription'
+        disable 'ContentDescription'
     }
 }
 

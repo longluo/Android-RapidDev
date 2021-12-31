@@ -112,7 +112,7 @@ public final class MineFragment extends TitleBarFragment<HomeActivity> {
 
             new InputDialog.Builder(getAttachActivity())
                     .setTitle("跳转到网页")
-                    .setContent("https://www.jianshu.com/u/f7bb67d86765")
+                    .setContent("http://www.longluo.me")
                     .setHint("请输入网页地址")
                     .setConfirm(getString(R.string.common_confirm))
                     .setCancel(getString(R.string.common_cancel))

@@ -4,7 +4,6 @@
 
 * 博客地址：[Long Luo's Develop Notes](https://longluo.me)
 
-
 * [点击下载 Apk 体验](https://raw.githubusercontent.com/longluo/Android_Dev_Quick/dev/releases/Android_Dev_Quick_debug.apk)，
 
 或者扫码下载
@@ -51,7 +50,7 @@
 
 ![](picture/activity/36.jpg)
 
-#### 常用对话框
+### 常用对话框
 
 ![](picture/dialog/1.jpg) ![](picture/dialog/2.jpg) ![](picture/dialog/3.jpg)
 

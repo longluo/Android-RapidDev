@@ -182,7 +182,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 
     // GreenDao
-    implementation "org.greenrobot:greendao:3.3.0"
+    implementation 'org.greenrobot:greendao:3.3.0'
 
     // data cipher
 //    implementation rootProject.ext.dependencies["sqlcipher"]

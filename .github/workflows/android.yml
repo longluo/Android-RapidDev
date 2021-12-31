@@ -4,8 +4,11 @@ on:
   push:
     branches:
       - master
+      - dev
+
     tags:
       - 'v*'
+
   pull_request:
     branches: [ master ]
 
@@ -43,7 +46,7 @@ jobs:
       id: apkInfo
       uses: JantHsueh/get-apk-info-action@master
       with:
-        apkPath: ./app/build/outputs/apk/release/app-release-unsigned.apk
+        apkPath: ./build/app/outputs/apk/debug/*.apk
 
     - name: Get git log
       id: gitLog
@@ -60,7 +63,7 @@ jobs:
           echo -e "\n show path \n"
           pwd
           ls -l
-          ${{github.workspace}}/app/build/outputs/apk/release/*.apk
+          ${{github.workspace}}/build/app/outputs/apk/debug/*.apk
 
     - name: Upload File to Pgyer
       id: upload
@@ -68,4 +71,4 @@ jobs:
       with:
         url: https://www.pgyer.com/apiv2/app/upload
         forms: '{"_api_key":"${{ secrets.pgyer_key }}","buildInstallType":3}'
-        fileForms: '{"file":"app/build/outputs/apk/release/app-release-unsigned.apk"}'
+        fileForms: '{"file":"build/app/outputs/apk/debug/*.apk"}'
