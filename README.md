@@ -4,11 +4,13 @@
 
 * 博客地址：[Long Luo's Develop Notes](https://longluo.me)
 
-* [点击下载 Apk 体验](https://raw.githubusercontent.com/longluo/Android_Dev_Quick/dev/releases/Android_Dev_Quick_debug.apk)，
+* [点击下载 Apk 体验](https://raw.githubusercontent.com/longluo/Android_Dev_Quick/dev/releases/Android_Dev_Quick_release.apk)，
 
 或者扫码下载
 
 ![](pictures/QuickDev_QRCode.png)
+
+如果你是一名开发者，你也可以选择[下载 Debug版 Apk](https://raw.githubusercontent.com/longluo/Android_Dev_Quick/dev/releases/Android_Dev_Quick_debug.apk)
 
 ### 常用界面
 
