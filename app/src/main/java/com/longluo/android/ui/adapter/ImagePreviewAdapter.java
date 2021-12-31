@@ -5,15 +5,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
+import com.bumptech.glide.Glide;
 import com.github.chrisbanes.photoview.PhotoView;
 import com.longluo.android.R;
 import com.longluo.android.app.AppAdapter;
-import com.longluo.android.http.glide.GlideApp;
 
 /**
-
-2020/08/28
- 图片预览适配器
+ * 图片预览适配器
  */
 public final class ImagePreviewAdapter extends AppAdapter<String> {
 
@@ -38,7 +36,7 @@ public final class ImagePreviewAdapter extends AppAdapter<String> {
 
         @Override
         public void onBindView(int position) {
-            GlideApp.with(getContext())
+            Glide.with(getContext())
                     .load(getItem(position))
                     .into(mPhotoView);
         }

@@ -12,8 +12,8 @@ import android.view.animation.AnimationUtils;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import io.github.longluo.base.BaseActivity;
-import io.github.longluo.base.BaseAdapter;
+import com.hjq.permissions.Permission;
+import com.hjq.permissions.XXPermissions;
 import com.longluo.android.R;
 import com.longluo.android.action.StatusAction;
 import com.longluo.android.aop.Log;
@@ -25,9 +25,6 @@ import com.longluo.android.other.GridSpaceDecoration;
 import com.longluo.android.ui.adapter.ImageSelectAdapter;
 import com.longluo.android.ui.dialog.AlbumDialog;
 import com.longluo.android.widget.StatusLayout;
-import com.hjq.permissions.Permission;
-import com.hjq.permissions.XXPermissions;
-import io.github.longluo.ui.view.FloatActionButton;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -36,10 +33,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-/**
+import io.github.longluo.base.BaseActivity;
+import io.github.longluo.base.BaseAdapter;
+import io.github.longluo.ui.view.FloatActionButton;
 
-07/24
- 选择图片
+/**
+ * 选择图片
  */
 public final class ImageSelectActivity extends AppActivity
         implements StatusAction, Runnable,
@@ -102,17 +101,27 @@ public final class ImageSelectActivity extends AppActivity
 
     private ImageSelectAdapter mAdapter;
 
-    /** 最大选中 */
+    /**
+     * 最大选中
+     */
     private int mMaxSelect = 1;
-    /** 选中列表 */
+    /**
+     * 选中列表
+     */
     private final ArrayList<String> mSelectImage = new ArrayList<>();
 
-    /** 全部图片 */
+    /**
+     * 全部图片
+     */
     private final ArrayList<String> mAllImage = new ArrayList<>();
-    /** 图片专辑 */
+    /**
+     * 图片专辑
+     */
     private final HashMap<String, List<String>> mAllAlbum = new HashMap<>();
 
-    /** 专辑选择对话框 */
+    /**
+     * 专辑选择对话框
+     */
     private AlbumDialog.Builder mAlbumDialog;
 
     @Override
@@ -283,9 +292,10 @@ public final class ImageSelectActivity extends AppActivity
 
     /**
      * {@link BaseAdapter.OnItemClickListener}
-     * @param recyclerView      RecyclerView对象
-     * @param itemView          被点击的条目对象
-     * @param position          被点击的条目位置
+     *
+     * @param recyclerView RecyclerView对象
+     * @param itemView     被点击的条目对象
+     * @param position     被点击的条目位置
      */
     @Override
     public void onItemClick(RecyclerView recyclerView, View itemView, int position) {
@@ -294,9 +304,10 @@ public final class ImageSelectActivity extends AppActivity
 
     /**
      * {@link BaseAdapter.OnItemLongClickListener}
-     * @param recyclerView      RecyclerView对象
-     * @param itemView          被点击的条目对象
-     * @param position          被点击的条目位置
+     *
+     * @param recyclerView RecyclerView对象
+     * @param itemView     被点击的条目对象
+     * @param position     被点击的条目位置
      */
     @Override
     public boolean onItemLongClick(RecyclerView recyclerView, View itemView, int position) {
@@ -309,9 +320,10 @@ public final class ImageSelectActivity extends AppActivity
 
     /**
      * {@link BaseAdapter.OnChildClickListener}
-     * @param recyclerView      RecyclerView对象
-     * @param childView         被点击的条目子 View Id
-     * @param position          被点击的条目位置
+     *
+     * @param recyclerView RecyclerView对象
+     * @param childView    被点击的条目子 View Id
+     * @param position     被点击的条目位置
      */
     @Override
     public void onChildClick(RecyclerView recyclerView, View childView, int position) {
@@ -462,13 +474,14 @@ public final class ImageSelectActivity extends AppActivity
         /**
          * 选择回调
          *
-         * @param data          图片列表
+         * @param data 图片列表
          */
         void onSelected(List<String> data);
 
         /**
          * 取消回调
          */
-        default void onCancel() {}
+        default void onCancel() {
+        }
     }
 }

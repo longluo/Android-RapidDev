@@ -1,51 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Ó¦ÓÃÖ÷ÌâÑùÊ½ -->
+    <!-- åº”ç”¨ä¸»é¢˜æ ·å¼ -->
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <!-- ´°¿Ú±³¾°ÑÕÉ« -->
+        <!-- çª—å£èƒŒæ™¯é¢œè‰² -->
         <item name="android:windowBackground">@color/common_window_background_color</item>
-        <!-- Ó¦ÓÃµÄÖ÷ÒªÉ«µ÷£¬ActionBar Toolbar Ä¬ÈÏÊ¹ÓÃ¸ÃÑÕÉ« -->
+        <!-- åº”ç”¨çš„ä¸»è¦è‰²è°ƒï¼ŒActionBar Toolbar é»˜è®¤ä½¿ç”¨è¯¥é¢œè‰² -->
         <item name="colorPrimary">@color/common_primary_color</item>
-        <!-- Ó¦ÓÃµÄÖ÷Òª°µÉ«µ÷£¬×´Ì¬À¸Ä¬ÈÏÊ¹ÓÃ¸ÃÑÕÉ« -->
+        <!-- åº”ç”¨çš„ä¸»è¦æš—è‰²è°ƒï¼ŒçŠ¶æ€æ é»˜è®¤ä½¿ç”¨è¯¥é¢œè‰² -->
         <item name="colorPrimaryDark">@color/common_primary_dark_color</item>
-        <!-- Ó¦ÓÃµÄÇ¿µ÷É«£¬CheckBox RadioButton Switch µÈÒ»°ã¿Ø¼þµÄÑ¡ÖÐÐ§¹ûÄ¬ÈÏ²ÉÓÃ¸ÃÑÕÉ« -->
+        <!-- åº”ç”¨çš„å¼ºè°ƒè‰²ï¼ŒCheckBox RadioButton Switch ç­‰ä¸€èˆ¬æŽ§ä»¶çš„é€‰ä¸­æ•ˆæžœé»˜è®¤é‡‡ç”¨è¯¥é¢œè‰² -->
         <item name="colorAccent">@color/common_accent_color</item>
-        <!-- Ä¬ÈÏÎÄ±¾ÑÕÉ«£¬Button¡¢TextView µÄÎÄ×ÖÑÕÉ« -->
+        <!-- é»˜è®¤æ–‡æœ¬é¢œè‰²ï¼ŒButtonã€TextView çš„æ–‡å­—é¢œè‰² -->
         <item name="android:textColor">@color/common_text_color</item>
-        <!-- Ä¬ÈÏ×ÖÌå´óÐ¡£¬Button¡¢TextView µÄ×ÖÌå´óÐ¡ -->
+        <!-- é»˜è®¤å­—ä½“å¤§å°ï¼ŒButtonã€TextView çš„å­—ä½“å¤§å° -->
         <item name="android:textSize">@dimen/sp_14</item>
-        <!-- Ä¬ÈÏÌáÊ¾ÑÕÉ«£¬Button¡¢TextView µÄÌáÊ¾ÎÄ×ÖÑÕÉ« -->
+        <!-- é»˜è®¤æç¤ºé¢œè‰²ï¼ŒButtonã€TextView çš„æç¤ºæ–‡å­—é¢œè‰² -->
         <item name="android:textColorHint">@color/common_text_hint_color</item>
-        <!-- ActionMode ¸²¸Ç Actionbar ²»±»¶¥ÏÂÀ´ -->
+        <!-- ActionMode è¦†ç›– Actionbar ä¸è¢«é¡¶ä¸‹æ¥ -->
         <item name="windowActionModeOverlay">true</item>
         <item name="android:windowContentOverlay">@null</item>
-        <!-- ActionMode µÄÑÕÉ« -->
+        <!-- ActionMode çš„é¢œè‰² -->
         <item name="actionModeBackground">@color/common_primary_color</item>
-        <!-- ½â¾ö Android 5.1 ¼°ÒÔÉÏ°æ±¾ Button Ó¢ÎÄ×Ö·û´®×Ô¶¯±ä´óÐ´µÄÎÊÌâ -->
+        <!-- è§£å†³ Android 5.1 åŠä»¥ä¸Šç‰ˆæœ¬ Button è‹±æ–‡å­—ç¬¦ä¸²è‡ªåŠ¨å˜å¤§å†™çš„é—®é¢˜ -->
         <item name="android:textAllCaps">false</item>
-        <!-- ½â¾ö ImageView ²»ÄÜ×Ô¶¯µÈ±ÈÀ­ÉìÍ¼Æ¬µÄÎÊÌâ -->
+        <!-- è§£å†³ ImageView ä¸èƒ½è‡ªåŠ¨ç­‰æ¯”æ‹‰ä¼¸å›¾ç‰‡çš„é—®é¢˜ -->
         <item name="android:adjustViewBounds">true</item>
-        <!-- Ä¬ÈÏÒþ²ØÊäÈë·¨£¬¿ªÆôÕâ¸öÑ¡Ïîºó»áµ¼ÖÂÊäÈë¶Ô»°¿òÔÚ¹Ø±ÕÖ®ºó²»ÄÜ¹Ø±ÕÈí¼üÅÌ -->
+        <!-- é»˜è®¤éšè—è¾“å…¥æ³•ï¼Œå¼€å¯è¿™ä¸ªé€‰é¡¹åŽä¼šå¯¼è‡´è¾“å…¥å¯¹è¯æ¡†åœ¨å…³é—­ä¹‹åŽä¸èƒ½å…³é—­è½¯é”®ç›˜ -->
         <!--<item name="android:windowSoftInputMode">stateHidden</item>-->
-        <!-- ¹Ø±Õ RecyclerView NestedScrollView ViewPager Ë®²¨ÎÆÐ§¹û -->
+        <!-- å…³é—­ RecyclerView NestedScrollView ViewPager æ°´æ³¢çº¹æ•ˆæžœ -->
         <item name="android:overScrollMode">never</item>
-        <!-- ¹Ø±Õ TextView ×Ô´øµÄÎÄ×Ö¼ä¾à -->
+        <!-- å…³é—­ TextView è‡ªå¸¦çš„æ–‡å­—é—´è· -->
         <item name="android:includeFontPadding">false</item>
     </style>
 
-    <!-- È«ÆÁÖ÷ÌâÑùÊ½ -->
+    <!-- å…¨å±ä¸»é¢˜æ ·å¼ -->
     <style name="FullScreenTheme" parent="AppTheme">
         <item name="android:windowFullscreen">true</item>
     </style>
 
-    <!-- ÉÁÆÁÒ³Ö÷ÌâÑùÊ½ -->
+    <!-- é—ªå±é¡µä¸»é¢˜æ ·å¼ -->
     <style name="SplashTheme" parent="FullScreenTheme">
         <!-- https://www.jianshu.com/p/d0d907754603 -->
         <item name="android:windowIsTranslucent">false</item>
         <item name="android:windowDisablePreview">true</item>
     </style>
 
-    <!-- Ä¬ÈÏ°´Å¥ÑùÊ½ -->
+    <!-- é»˜è®¤æŒ‰é’®æ ·å¼ -->
     <style name="ButtonStyle" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:paddingStart">@dimen/dp_20</item>
         <item name="android:paddingEnd">@dimen/dp_20</item>
@@ -58,7 +59,7 @@
         <item name="android:foreground">@null</item>
     </style>
 
-    <!-- Ö±½Ç°´Å¥ÑùÊ½ -->
+    <!-- ç›´è§’æŒ‰é’®æ ·å¼ -->
     <style name="RectButtonStyle" parent="ButtonStyle">
         <item name="android:paddingStart">@dimen/dp_10</item>
         <item name="android:paddingEnd">@dimen/dp_10</item>
@@ -67,7 +68,7 @@
         <item name="android:background">@drawable/button_rect_selector</item>
     </style>
 
-    <!-- Ä¬ÈÏÎÄ±¾¿òÑùÊ½ -->
+    <!-- é»˜è®¤æ–‡æœ¬æ¡†æ ·å¼ -->
     <style name="EditTextStyle">
         <item name="android:background">@null</item>
         <item name="android:textSize">@dimen/sp_15</item>
@@ -79,21 +80,21 @@
         <item name="android:paddingEnd">@dimen/dp_10</item>
     </style>
 
-    <!-- Ä¬ÈÏË®Æ½·Ö¸îÏßÑùÊ½ -->
+    <!-- é»˜è®¤æ°´å¹³åˆ†å‰²çº¿æ ·å¼ -->
     <style name="HorizontalLineStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/line_size</item>
         <item name="android:background">@color/common_line_color</item>
     </style>
 
-    <!-- Ä¬ÈÏ´¹Ö±·Ö¸îÏßÑùÊ½ -->
+    <!-- é»˜è®¤åž‚ç›´åˆ†å‰²çº¿æ ·å¼ -->
     <style name="VerticalLineStyle">
         <item name="android:layout_width">@dimen/line_size</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/common_line_color</item>
     </style>
 
-    <!-- ÑéÖ¤Âë°´Å¥ÑùÊ½ -->
+    <!-- éªŒè¯ç æŒ‰é’®æ ·å¼ -->
     <style name="CountdownViewStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

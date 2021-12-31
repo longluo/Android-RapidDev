@@ -44,7 +44,7 @@ import java.util.Locale;
 
 /**
 
-02/16
+16
  视频播放控件
  */
 public final class PlayerView extends SimpleLayout

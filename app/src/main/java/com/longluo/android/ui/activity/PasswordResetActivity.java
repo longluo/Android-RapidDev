@@ -24,7 +24,7 @@ import com.hjq.http.listener.HttpCallback;
 
 /**
 
-02/27
+27
  重置密码
  */
 public final class PasswordResetActivity extends AppActivity

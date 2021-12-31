@@ -9,9 +9,7 @@ import com.longluo.android.R;
 import com.longluo.android.app.AppAdapter;
 
 /**
-
-2018/11/05
- 可进行拷贝的副本
+ * 可进行拷贝的副本
  */
 public final class CopyAdapter extends AppAdapter<String> {
 

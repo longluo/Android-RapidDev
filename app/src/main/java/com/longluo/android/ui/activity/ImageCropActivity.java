@@ -11,13 +11,12 @@ import android.provider.MediaStore;
 
 import androidx.core.content.FileProvider;
 
-import io.github.longluo.base.BaseActivity;
+import com.hjq.permissions.Permission;
 import com.longluo.android.R;
 import com.longluo.android.aop.Log;
 import com.longluo.android.aop.Permissions;
 import com.longluo.android.app.AppActivity;
 import com.longluo.android.other.AppConfig;
-import com.hjq.permissions.Permission;
 import com.tencent.bugly.crashreport.CrashReport;
 
 import java.io.File;
@@ -25,10 +24,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/**
+import io.github.longluo.base.BaseActivity;
 
-2021/09/19
- 图片裁剪
+/**
+ * 图片裁剪
  */
 public final class ImageCropActivity extends AppActivity {
 
@@ -89,7 +88,8 @@ public final class ImageCropActivity extends AppActivity {
     }
 
     @Override
-    protected void initView() {}
+    protected void initView() {
+    }
 
     @Override
     protected void initData() {
@@ -211,21 +211,22 @@ public final class ImageCropActivity extends AppActivity {
         /**
          * 裁剪成功回调
          *
-         * @param fileUri          文件路径
-         * @param fileName         文件名称
+         * @param fileUri  文件路径
+         * @param fileName 文件名称
          */
         void onSucceed(Uri fileUri, String fileName);
 
         /**
          * 错误回调
          *
-         * @param details       错误详情
+         * @param details 错误详情
          */
         void onError(String details);
 
         /**
          * 取消回调
          */
-        default void onCancel() {}
+        default void onCancel() {
+        }
     }
 }

@@ -13,8 +13,6 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.gyf.immersionbar.BarHide;
 import com.gyf.immersionbar.ImmersionBar;
-import io.github.longluo.base.BaseAdapter;
-import io.github.longluo.base.RecyclerPagerAdapter;
 import com.longluo.android.R;
 import com.longluo.android.aop.Log;
 import com.longluo.android.app.AppActivity;
@@ -24,12 +22,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import io.github.longluo.base.BaseAdapter;
+import io.github.longluo.base.RecyclerPagerAdapter;
 import me.relex.circleindicator.CircleIndicator;
 
 /**
-
-03/05
- 查看大图
+ * 查看大图
  */
 public final class ImagePreviewActivity extends AppActivity
         implements ViewPager.OnPageChangeListener,
@@ -77,9 +75,13 @@ public final class ImagePreviewActivity extends AppActivity
     private ViewPager mViewPager;
     private ImagePreviewAdapter mAdapter;
 
-    /** 圆圈指示器 */
+    /**
+     * 圆圈指示器
+     */
     private CircleIndicator mCircleIndicatorView;
-    /** 文本指示器 */
+    /**
+     * 文本指示器
+     */
     private TextView mTextIndicatorView;
 
     @Override
@@ -142,7 +144,8 @@ public final class ImagePreviewActivity extends AppActivity
      */
 
     @Override
-    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+    }
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -151,7 +154,8 @@ public final class ImagePreviewActivity extends AppActivity
     }
 
     @Override
-    public void onPageScrollStateChanged(int state) {}
+    public void onPageScrollStateChanged(int state) {
+    }
 
     @Override
     protected void onDestroy() {
@@ -161,9 +165,10 @@ public final class ImagePreviewActivity extends AppActivity
 
     /**
      * {@link BaseAdapter.OnItemClickListener}
-     * @param recyclerView      RecyclerView 对象
-     * @param itemView          被点击的条目对象
-     * @param position          被点击的条目位置
+     *
+     * @param recyclerView RecyclerView 对象
+     * @param itemView     被点击的条目对象
+     * @param position     被点击的条目位置
      */
     @Override
     public void onItemClick(RecyclerView recyclerView, View itemView, int position) {

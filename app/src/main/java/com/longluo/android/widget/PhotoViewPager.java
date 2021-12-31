@@ -7,9 +7,7 @@ import android.view.MotionEvent;
 import io.github.longluo.ui.layout.NestedViewPager;
 
 /**
-
-05/07
- ViewPager 中使用 PhotoView 时出现 pointerIndex out of range 异常
+ * ViewPager 中使用 PhotoView 时出现 pointerIndex out of range 异常
  */
 public final class PhotoViewPager extends NestedViewPager {
 

@@ -9,12 +9,12 @@
 won't go "under" status bar -->
     <dimen name="nav_drawer_top_padding">0dp</dimen>
     
-        <!-- Ĭ�Ϸָ��ߴ�С -->
+    <!-- 默认分割线大小 -->
     <dimen name="line_size">1px</dimen>
 
-    <!-- Ĭ�ϰ�ť��Բ�Ǵ�С -->
+    <!-- 默认按钮的圆角大小 -->
     <dimen name="button_circle_size">999dp</dimen>
 
-    <!-- ͨ�öԻ���Բ�Ǵ�С -->
+    <!-- 通用对话框圆角大小 -->
     <dimen name="dialog_ui_round_size">15dp</dimen>
 </resources>

@@ -10,9 +10,7 @@ import com.longluo.android.R;
 import com.longluo.android.app.AppAdapter;
 
 /**
-
-09/22
- 状态数据列表
+ * 状态数据列表
  */
 public final class StatusAdapter extends AppAdapter<String> {
 
