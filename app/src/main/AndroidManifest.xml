@@ -44,6 +44,10 @@
         tools:replace="android:allowBackup,android:supportsRtl"
         tools:targetApi="n">
 
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
         <!-- 表示当前已经适配了分区存储 -->
         <meta-data
             android:name="ScopedStorage"

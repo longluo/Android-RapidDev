@@ -147,7 +147,7 @@ android {
 // GreenDao Database
 greendao {
     schemaVersion 1
-    daoPackage 'com.longluo.android.dao.gen'
+    daoPackage 'com.longluo.android.dao'
     targetGenDir 'src/main/java'
 }
 
