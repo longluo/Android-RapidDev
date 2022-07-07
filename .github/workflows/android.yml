@@ -14,15 +14,15 @@ on:
 
 jobs:
   build:
-
+    name: Build Apk
     runs-on: ubuntu-latest
 
     steps:
     - name: checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: set up JDK 11
-      uses: actions/setup-java@v2
+      uses: actions/setup-java@v3
       with:
         java-version: '14'
         distribution: 'adopt'
@@ -32,9 +32,10 @@ jobs:
       id: build
       run: |
         pwd
-        echo -e "\n gradlew assembleRelease \n"
+        echo -e "\n\n gradlew assembleRelease start... \n\n"
         chmod a+x gradlew
         ./gradlew assembleRelease
+        echo -e "\n\n"
 
     - name: Get Time
       id: time
@@ -55,15 +56,20 @@ jobs:
         tag: release
 
     - name: upload apk
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       if: always()
       with:
         name: QuickDev.apk
-        path: |
-          echo -e "\n show path \n"
-          pwd
-          ls -l
-          ${{github.workspace}}/build/app/outputs/apk/release/*.apk
+        path: ${{ github.workspace }}/build/app/outputs/apk/release/*.apk
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.run_number }}
+        release_name: ${{ github.event.repository.name }} ${{ steps.branch-name.outputs.current_branch }} v${{ steps.apkInfo.outputs.versionNum }} ${{ steps.apk.outputs.versionCode }} ${{ steps.time.outputs.time}}
 
     - name: Upload File to Pgyer
       id: upload
