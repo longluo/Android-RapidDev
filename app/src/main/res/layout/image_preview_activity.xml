@@ -7,7 +7,7 @@
     android:background="#363636"
     tools:context=".ui.activity.ImagePreviewActivity">
 
-    <com.longluo.android.widget.PhotoViewPager
+    <me.longluo.android.widget.PhotoViewPager
         android:id="@+id/vp_image_preview_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

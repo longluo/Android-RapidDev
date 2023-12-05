@@ -1,6 +1,6 @@
-# 安卓快速开发框架 Android_Dev_Quick
+# 安卓快速开发框架 Android_RapidDev
 
-* 项目地址：[Github](https://github.com/longluo/Android_Dev_Quick)
+* 项目地址：[Github](https://github.com/longluo/Android_RapidDev)
 
 * 博客地址：[Long Luo's Develop Notes](https://longluo.me)
 

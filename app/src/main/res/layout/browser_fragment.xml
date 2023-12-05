@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.longluo.android.widget.StatusLayout
+<me.longluo.android.widget.StatusLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,11 +17,11 @@
         app:srlEnablePreviewInEditMode="false"
         app:srlPrimaryColor="#444444">
 
-        <com.longluo.android.widget.BrowserView
+        <me.longluo.android.widget.BrowserView
             android:id="@+id/wv_browser_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
-</com.longluo.android.widget.StatusLayout>
+</me.longluo.android.widget.StatusLayout>

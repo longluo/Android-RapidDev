@@ -55,6 +55,7 @@ ext {
                 HOST_URL = "https://www.test.baidu.com/"
             }
             break
+
         case SERVER_TYPE_PRODUCT:
             LOG_ENABLE = false
             BUGLY_ID = "请自行替换 Bugly 上面的 AppID"

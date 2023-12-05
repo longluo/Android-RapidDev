@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.longluo.android.widget.StatusLayout
+        <me.longluo.android.widget.StatusLayout
             android:id="@+id/hl_image_select_hint"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -30,7 +30,7 @@
                 tools:listitem="@layout/image_select_item"
                 tools:spanCount="3" />
 
-        </com.longluo.android.widget.StatusLayout>
+        </me.longluo.android.widget.StatusLayout>
 
         <io.github.longluo.ui.view.FloatActionButton
             android:id="@+id/fab_image_select_floating"

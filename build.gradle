@@ -5,16 +5,23 @@ apply from: 'configs.gradle'
 
 buildscript {
     // 导入通用的 Maven 库配置
-    apply from: 'maven.gradle'
+//    apply from: 'maven.gradle'
 
     repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
         // 阿里云云效仓库（Gradle 插件）：https://maven.aliyun.com/mvn/guide
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/grails-core/' }
+        maven { url 'https://maven.aliyun.com/repository/apache-snapshots/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
 
-        // Umeng https://developer.umeng.com/docs/193624/detail/194590
-        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url "https://jitpack.io" }
 
-        addCommonMaven(repositories)
+        google()
+        jcenter()
     }
 
     // Studio 插件推荐：https://github.com/getActivity/StudioPlugins
@@ -37,17 +44,27 @@ buildscript {
 
 allprojects {
     repositories {
-        // 友盟远程仓库：https://info.umeng.com/detail?id=443&cateId=1
-        maven { url 'https://repo1.maven.org/maven2' }
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/spring/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        // 阿里云云效仓库（Gradle 插件）：https://maven.aliyun.com/mvn/guide
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/spring-plugin/' }
+        maven { url 'https://maven.aliyun.com/repository/grails-core/' }
+        maven { url 'https://maven.aliyun.com/repository/apache-snapshots/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
 
-        addCommonMaven(repositories)
+        maven { url "https://jitpack.io" }
+
+        google()
+        jcenter()
     }
 
     tasks.withType(JavaCompile) {
         // 设置全局编码
         options.encoding = 'UTF-8'
     }
-    
+
     tasks.withType(Javadoc) {
         // 设置文档编码
         options {

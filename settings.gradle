@@ -1,4 +1,4 @@
-rootProject.name = "Android_Dev_Quick"
+rootProject.name = "Android RapidDev"
 include ':app'
 include ':DroidBase'
 include ':DroidUI'

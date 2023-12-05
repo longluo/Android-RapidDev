@@ -14,7 +14,7 @@ android {
     defaultConfig {
 
         // 无痛修改包名：https://www.jianshu.com/p/17327e191d2e
-        applicationId 'com.longluo.android'
+        applicationId 'me.longluo.android'
 
         //multiDexEnabled true
 
@@ -147,14 +147,13 @@ android {
 // GreenDao Database
 greendao {
     schemaVersion 1
-    daoPackage 'com.longluo.android.dao'
+    daoPackage 'me.longluo.android.dao'
     targetGenDir 'src/main/java'
 }
 
 // 添加构建依赖项：https://developer.android.google.cn/studio/build/dependencies
 // api 与 implementation 的区别：https://www.jianshu.com/p/8962d6ba936e
 dependencies {
-
     // 基类封装
     implementation project(':DroidBase')
     // UI封装
