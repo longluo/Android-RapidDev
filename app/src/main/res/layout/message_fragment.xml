@@ -103,6 +103,14 @@
                 android:layout_marginVertical="@dimen/dp_30"
                 android:text="切换到首页 Tab" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_fast_click"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/dp_30"
+                android:text="No Fast Click" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
